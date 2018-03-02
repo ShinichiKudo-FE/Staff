@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.container {
+  margin: 0 auto; }
+
+.StaffHeader {
+  font-size: 15px;
+  color: rosybrown; }
+
+.optHeader, .itemPanel, .itemHead {
+  width: 100%;
+  text-align: center; }
+
+.itemHead tr {
+  display: table-cell;
+  text-align: center; }
+
+.itemHead th {
+  width: 100%;
+  display: block; }
+
+.itemPanel {
+  border: 1px solid #ccc; }
+
+.addForm {
+  text-align: center; }
+
+.overLay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  text-align: center; }
+
+.overLay table {
+  margin: 0 auto; }
+
+.tips-success, .tips-mes, .tips-age {
+  color: red;
+  display: none; }
