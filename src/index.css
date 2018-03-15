@@ -8,7 +8,11 @@ body {
 
 .StaffHeader {
   font-size: 15px;
-  color: rosybrown; }
+  color: rosybrown;
+  padding-top: 20px; }
+
+.optHeader {
+  margin-bottom: 20px; }
 
 .optHeader, .itemPanel, .itemHead {
   width: 100%;
@@ -16,7 +20,9 @@ body {
 
 .itemHead tr {
   display: table-cell;
-  text-align: center; }
+  text-align: center;
+  line-height: 50px;
+  border-bottom: 1px solid #999; }
 
 .itemHead th {
   width: 100%;
@@ -29,7 +35,7 @@ body {
   text-align: center; }
 
 .overLay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
@@ -44,3 +50,34 @@ body {
 .tips-success, .tips-mes, .tips-age {
   color: red;
   display: none; }
+
+#idSelect, #orderSelect {
+  margin-left: 10px; }
+
+.tableBar {
+  line-height: 42px;
+  border-bottom: 1px solid #ccc; }
+
+.itemBtn:nth-child(2) {
+  margin-left: 10px; }
+
+#staffAddName, #staffAddAge, #staffEditName, #staffEditAge {
+  outline: none;
+  border: 1px #ccc solid;
+  line-height: 25px;
+  padding-left: 12px;
+  width: 250px; }
+
+#staffAddSex, #staffAddId, #staffAddDescrip, #staffEditSex, #staffEditId, #staffEditDescrip {
+  width: 250px; }
+
+.newTable {
+  margin-bottom: 10px; }
+
+.newLable {
+  width: 100px;
+  text-align: center;
+  display: inline-block; }
+
+.content {
+  margin: 15% auto; }

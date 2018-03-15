@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Button} from 'antd';
 import 'antd/dist/antd.css';
+import '../index.css';
 export default class StaffItem extends Component {
     //点击删除
     handleDelete(e){
@@ -14,7 +15,7 @@ export default class StaffItem extends Component {
     }
     render() {
         return (
-            <tr style={{'cursor':'pointer'}}>
+            <tr style={{'cursor':'pointer'}} className = "tableBar">
                 <td className="itemId">
                     {this.props.item.info.name}
                 </td>
@@ -29,7 +30,6 @@ export default class StaffItem extends Component {
                 </td>
                 <td className="itemId">
                     <Button type ='danger' className="itemBtn" onClick={this.handleDelete.bind(this)}>删除</Button>
-                    
                     <Button type ='dashed' className="itemBtn" onClick={this.handleDetail.bind(this)}>详情</Button>
                 </td>
             </tr>

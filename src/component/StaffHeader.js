@@ -32,7 +32,7 @@ class StaffHeader extends Component{
                     <tbody>  
                         <tr>
                             <td className = "headerTd">
-                            <input type="text" ref = 'searchBar' placeholder="Search..." onChange={this.handlerSearch.bind(this)}/>
+                            <input style={{outline:'none',border: '1px solid #ccc',lineHeight:'25px',paddingLeft:"12px"}} type="text" ref = 'searchBar' placeholder="Search..."  onChange={this.handlerSearch.bind(this)}/>
                             </td>
                             <td className = "headerTd">
                                 <label htmlFor="idSelect">人员筛选</label>
