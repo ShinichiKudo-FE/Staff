@@ -1,6 +1,6 @@
 
 # 如何使用
-我是使用creat-react-app + antD + sass 写的一个搜索，增删改查的例子 里面样式比较简陋，但是功能很全。
+我是使用creat-react-app + antD + sass 写的一个人员增删改查的管理模块
 
 ## `npm install` or `yarn`
 安装node_modules包
