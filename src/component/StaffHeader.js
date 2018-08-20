@@ -27,7 +27,7 @@ class StaffHeader extends Component{
     render(){
         return(
           <div className = "StaffHeader">
-                <h2 style={{'textAlign':'center'}}>人员管理系统</h2>
+                <h2 style={{textAlign:'center',borderBottom:'1px solid #ccc',lineHeight:'50px'}}>人员管理系统</h2>
                 <table className = "optHeader">
                     <tbody>  
                         <tr>

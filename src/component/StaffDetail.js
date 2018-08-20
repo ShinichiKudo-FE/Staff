@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Button } from "antd";
 export default class StaffDetail extends React.Component{
 
     handlerEdit(){
@@ -115,8 +116,8 @@ export default class StaffDetail extends React.Component{
                 <p ref='Dtips' className='tips-success'>修改成功</p>
                 <p ref='DtipsUnDone' className='tips-mes'>请录入完整的人员信息</p>
                 <p ref='DtipsUnAge' className='tips-age'>请录入正确的年龄</p>
-                <button onClick={this.handlerEdit.bind(this)}>完成</button>
-                <button onClick={this.handlerClose.bind(this)}>关闭</button>
+                <Button type="primary" onClick={this.handlerEdit.bind(this)} style={{marginRight:'20px'}}>完成</Button>
+                <Button onClick={this.handlerClose.bind(this)}>关闭</Button>
             </div>
          </div>
         );

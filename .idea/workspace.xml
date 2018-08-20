@@ -84,8 +84,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="STAFF.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/component/STAFF.js">
+      <file leaf-file-name="Staff.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/component/Staff.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3396">
               <caret line="189" column="37" lean-forward="false" selection-start-line="189" selection-start-column="37" selection-end-line="189" selection-end-column="37" />
@@ -120,7 +120,7 @@
         <option value="$PROJECT_DIR$/src/component/StaffItemPanel.js" />
         <option value="$PROJECT_DIR$/src/component/StaffItem.js" />
         <option value="$PROJECT_DIR$/src/component/StaffHeader.js" />
-        <option value="$PROJECT_DIR$/src/component/STAFF.js" />
+        <option value="$PROJECT_DIR$/src/component/Staff.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/component/StaffDetail.js" />
       </list>
@@ -334,7 +334,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/STAFF.js">
+    <entry file="file://$PROJECT_DIR$/src/component/Staff.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3396">
           <caret line="189" column="37" lean-forward="false" selection-start-line="189" selection-start-column="37" selection-end-line="189" selection-end-column="37" />

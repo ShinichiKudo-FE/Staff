@@ -1,3 +1,4 @@
+import axios from '../axios';
 class staffItem{
     constructor(item){
         this.info = {};
@@ -10,20 +11,20 @@ class staffItem{
     }
 }
 staffItem.key = 0;
-export default class STAFF {
+export default class Staff {
     constructor(){
         this.allStaff = [
-            new staffItem(STAFF.rawData[0]),
-            new staffItem(STAFF.rawData[1]),
-            new staffItem(STAFF.rawData[2]),
-            new staffItem(STAFF.rawData[3]),
-            new staffItem(STAFF.rawData[4]),
-            new staffItem(STAFF.rawData[5]),
-            new staffItem(STAFF.rawData[6]),
-            new staffItem(STAFF.rawData[7]),
-            new staffItem(STAFF.rawData[8]),
-            new staffItem(STAFF.rawData[9]),
-            new staffItem(STAFF.rawData[10])
+            new staffItem(Staff.rawData[0]),
+            new staffItem(Staff.rawData[1]),
+            new staffItem(Staff.rawData[2]),
+            new staffItem(Staff.rawData[3]),
+            new staffItem(Staff.rawData[4]),
+            new staffItem(Staff.rawData[5]),
+            new staffItem(Staff.rawData[6]),
+            new staffItem(Staff.rawData[7]),
+            new staffItem(Staff.rawData[8]),
+            new staffItem(Staff.rawData[9]),
+            new staffItem(Staff.rawData[10])
         ];
         this.staff = this.allStaff;
         this.sortType = 0;//0-身份 1-年龄升 2-年龄降
@@ -31,6 +32,23 @@ export default class STAFF {
         this.word = '';//搜索关键字
         this._sortStaff(this.sortType);  //默认按身份排序
         this._filtStaff(this.filtType);
+    }
+    componentDidMount(){
+        this.requese();
+    }
+    request(){
+        axios.ajax({
+            url:'/staffmsg'
+        }).then((res) =>{
+            if(res.code == '0'){
+                res.result.list.map((item, index) => {
+                    item.key = index
+                })
+            }
+            this.setState({
+                allStaff: res.result.list
+            })
+        })
     }
     //增
     addStaffItem(item) {
@@ -196,12 +214,12 @@ export default class STAFF {
         return this;
     }
 }
-STAFF.rawData = [{ descrip:'我是一匹来自远方的狼。', sex: '男', age: 20, name: '张三', id: '主任'},
-    { descrip:'我是一匹来自远方的狼。', sex: '女', age: 21, name: '赵静', id: '学生'},
-    { descrip:'我是一匹来自远方的狼。', sex: '女', age: 22, name: '王二麻', id: '学生'},
-    { descrip:'我是一匹来自远方的狼。', sex: '女', age: 24, name: '李晓婷', id: '实习'},
-    { descrip:'我是一匹来自远方的狼。', sex: '男', age: 23, name: '张春田', id: '实习'},
-    { descrip:'我是一匹来自远方的狼。', sex: '男', age: 22, name: '刘建国', id: '学生'},
+Staff.rawData = [{ descrip:'我是一匹来自远方的狼。', sex: '男', age: 20, name: '张三', id: '主任'},
+    { descrip:'我是一匹来自远方的蛇。', sex: '女', age: 21, name: '赵静', id: '学生'},
+    { descrip:'我是一匹来自远方的兔。', sex: '女', age: 22, name: '王二麻', id: '学生'},
+    { descrip:'我是一匹来自远方的狮。', sex: '女', age: 24, name: '李晓婷', id: '实习'},
+    { descrip:'我是一匹来自远方的鼠。', sex: '男', age: 23, name: '张春田', id: '实习'},
+    { descrip:'我是一匹来自远方的虎。', sex: '男', age: 22, name: '刘建国', id: '学生'},
     { descrip:'我是一匹来自远方的狼。', sex: '男', age: 24, name: '张八', id: '主任'},
     { descrip:'我是一匹来自远方的狗。', sex: '男', age: 35, name: '李四', id: '老师'},
     { descrip:'我是一匹来自远方的猪。', sex: '男', age: 42, name: '王五', id: '学生'},

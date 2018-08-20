@@ -18,18 +18,19 @@ body {
   width: 100%;
   text-align: center; }
 
-.itemHead tr {
-  display: table-cell;
-  text-align: center;
-  line-height: 50px;
-  border-bottom: 1px solid #999; }
-
-.itemHead th {
-  width: 100%;
-  display: block; }
+.itemHead {
+  display: flex; }
+  .itemHead tr {
+    flex: 1;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc; }
+    .itemHead tr th {
+      display: block;
+      text-align: center; }
 
 .itemPanel {
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  background: #fff; }
 
 .addForm {
   text-align: center; }
@@ -55,8 +56,15 @@ body {
   margin-left: 10px; }
 
 .tableBar {
+  width: 100%;
   line-height: 42px;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  display: flex; }
+  .tableBar td {
+    flex: 1; }
+
+.tableBar:nth-last-of-type(1) {
+  border: none; }
 
 .itemBtn:nth-child(2) {
   margin-left: 10px; }
@@ -81,3 +89,12 @@ body {
 
 .content {
   margin: 15% auto; }
+
+.itemEmpty {
+  text-align: center;
+  background: #fff; }
+
+.button-center {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; }

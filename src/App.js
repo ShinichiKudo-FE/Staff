@@ -3,7 +3,7 @@ import StaffDetail from './component/StaffDetail';
 import StaffFooter from './component/StaffFooter';
 import StaffHeader from './component/StaffHeader';
 import StaffItemPanel from './component/StaffItemPanel';
-import STAFF from './component/STAFF'
+import Staff from './component/Staff'
 import './index.css';
 //antd-mobile Ul库
 // import { Button, Card, WingBlank, WhiteSpace} from 'antd-mobile';
@@ -14,7 +14,7 @@ class App extends Component {
     constructor(){
         super();
         this.state = {
-            staff : new STAFF(),
+            staff : new Staff(),
             staffDetail : null
         }
     }
@@ -84,7 +84,7 @@ class App extends Component {
 
     render() {
       return (
-          <div>
+          <div style={{margin:10}}>
               <StaffHeader sortStaff={this.sortStaff.bind(this)} filtStaff={this.filtStaff.bind(this)} searchStaff={this.searchStaff.bind(this)}/>
               <StaffItemPanel items={this.state.staff.staff} removeStaffItem={this.removeStaffItem.bind(this)} detailStaffItem={this.detailStaffItem.bind(this)}/>
               <StaffFooter addStaffItem={this.addStaffItem.bind(this)}/>
