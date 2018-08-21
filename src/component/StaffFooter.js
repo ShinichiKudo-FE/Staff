@@ -75,7 +75,7 @@ class FooterDetail extends React.Component{
             }, 1000);
             return;
         }
-        this.props.addStaffItem(item);
+        this.props.addStaffItem(item); // 需要想向父组件传递props
         addForm.reset();
 
         //此处应在返回添加成功信息后确认
